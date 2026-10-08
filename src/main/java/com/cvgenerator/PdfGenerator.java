@@ -23,7 +23,7 @@ public class PdfGenerator {
             PDPage page = new PDPage(PDRectangle.A4);
             document.addPage(page);
 
-            // Türkçe karakter destekli fontları yükle
+            // Türkçe karakter destek
             InputStream fontStream =
                     getClass().getResourceAsStream("/Arial.ttf");
 
@@ -49,9 +49,9 @@ public class PdfGenerator {
             PDPageContentStream content =
                     new PDPageContentStream(document, page);
 
-            // =========================
-            // AD SOYAD
-            // =========================
+           
+            //isim
+            
 
             content.beginText();
             content.setFont(boldFont, 22);
@@ -60,9 +60,7 @@ public class PdfGenerator {
             content.endText();
 
 
-            // =========================
-            // KİŞİSEL BİLGİLER
-            // =========================
+           //kişisel bililer
 
             content.beginText();
             content.setFont(normalFont, 11);
@@ -90,9 +88,7 @@ public class PdfGenerator {
             content.endText();
 
 
-            // =========================
-            // PROFİL
-            // =========================
+            //profil
 
             content.beginText();
             content.setFont(boldFont, 16);
@@ -123,9 +119,7 @@ public class PdfGenerator {
             content.endText();
 
 
-            // =========================
-            // EĞİTİM
-            // =========================
+            //eğitim
 
             content.beginText();
             content.setFont(boldFont, 16);
@@ -181,10 +175,7 @@ public class PdfGenerator {
             );
 
 
-            // =========================
-            // TEKNİK BECERİLER
-            // =========================
-
+            //bilinen yazılım dilleri
             content.beginText();
             content.setFont(boldFont, 16);
             content.newLineAtOffset(50, 225);
@@ -211,9 +202,7 @@ public class PdfGenerator {
             content.endText();
 
 
-            // =========================
-            // YABANCI DİL
-            // =========================
+            //bilinen diller
 
             content.beginText();
             content.setFont(boldFont, 16);
@@ -232,9 +221,7 @@ public class PdfGenerator {
             content.endText();
 
 
-            // =========================
-            // FOTOĞRAF
-            // =========================
+            //vesikalık
 
             InputStream imageStream =
                     getClass().getResourceAsStream("/profile.jpg");
